@@ -43,7 +43,7 @@ public class OnlineBanking extends Bankingrules implements StandardProcess {
 	@Override
 	public void withdraw(double withdrawmoney) {
 		// TODO Auto-generated method stub
-		if (withdrawllimit > withdrawmoney) {
+		if (withdrawllimit < withdrawmoney) {
 			accountBalance = accountBalance - withdrawmoney;
 			System.out.println("New balance after e-Transfer withdrawl: " + accountBalance);
 			System.out.println("Would you like to make another Withdrawal?");
