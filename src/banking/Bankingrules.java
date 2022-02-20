@@ -4,6 +4,7 @@ public abstract class Bankingrules {
 	double accountBalance=1000;
 	int pin;
 	int withdrawllimit;
+	int noOftransectionsallowded = 3;
 	public Bankingrules(int pin) {
 		super();
 		this.pin = pin;
@@ -33,27 +34,21 @@ public abstract class Bankingrules {
 	
 	public  void dailywithdrawallimitallowed() {
 		
-		withdrawllimit = 500;
+		withdrawllimit = 900;
 		
 	}
 	
-	public  void noOfTransectionsallowded() {
+	public abstract  void pinChange(int pinchange);
+
+	public abstract void deposit(double depositmoney) ;
+		// TODO Auto-generated method stub
 		
-	}
 	
-	public  void pinChange() {
-		
-	}
 
-	public void deposit(double depositmoney) {
+	public abstract void withdraw(double withdrawmoney);
 		// TODO Auto-generated method stub
-		
-	}
 
-	public void withdraw(double withdrawmoney) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 	
 	
 	
